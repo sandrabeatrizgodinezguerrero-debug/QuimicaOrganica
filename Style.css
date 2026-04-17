@@ -189,9 +189,13 @@ button:hover {
 
 .background-image {
     position: relative;
-    height: 650px; /* Altezza desiderata del contenitore */
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    color: white; /* Colore del testo */
+    color: white;
+    overflow: hidden;
 }
 
 .background-image::before {
@@ -201,10 +205,16 @@ button:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(https://godinezquimicaorganica.wordpress.com/wp-content/uploads/2025/03/quimica-organica-y-la-vida.png); 
+    background-image: url(https://godinezquimicaorganica.wordpress.com/wp-content/uploads/2025/03/quimica-organica-y-la-vida.png);
     background-size: cover;
     background-position: center;
-    filter: brightness(50%); /* Imposta la luminosità dell'immagine al 50% */
+    filter: brightness(50%);
+    z-index: 1;
+}
+
+.background-image > * {
+    position: relative;
+    z-index: 2;
 }
 
 h1 {
